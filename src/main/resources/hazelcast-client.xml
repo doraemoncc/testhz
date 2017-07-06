@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hazelcast-client
+        xsi:schemaLocation="http://www.hazelcast.com/schema/client-config hazelcast-client-config-3.4.xsd"
+        xmlns="http://www.hazelcast.com/schema/client-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+     <!-- By default use eth0 interface. -->
+    <properties>
+        <property name="hazelcast.client.connection.timeout">30000</property>
+        <property name="hazelcast.client.retry.count">6</property>
+    </properties>
+    <group>
+        <name>dev</name>
+        <password>dev-pass</password>
+    </group>
+    <!--192.168.159.129:5701-->
+    <network>
+        <cluster-members>
+            <address>192.168.159.129:5701</address>
+        </cluster-members>
+        <smart-routing>true</smart-routing>
+        <redo-operation>true</redo-operation>
+        <connection-attempt-limit>31536000</connection-attempt-limit>
+        <connection-attempt-period>3000</connection-attempt-period>
+        <connection-timeout>10000</connection-timeout>
+        <socket-interceptor enabled="false" />
+    </network>
+
+
+</hazelcast-client>
