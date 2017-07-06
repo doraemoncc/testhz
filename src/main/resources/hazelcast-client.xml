@@ -14,7 +14,7 @@
     <!--192.168.159.129:5701-->
     <network>
         <cluster-members>
-            <address>192.168.159.129:5701</address>
+            <address>192.168.159.1:5701</address>
         </cluster-members>
         <smart-routing>true</smart-routing>
         <redo-operation>true</redo-operation>
